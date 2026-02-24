@@ -8,15 +8,22 @@ const Hero = () => {
     <Wrapper>
       <picture>
         <source
+          type='image/avif'
           srcSet={`${heroImageSrc.replace('.jpg', '.avif')} 1x,
             ${heroImageSrc.replace('.jpg', '@2x.avif')} 2x,
             ${heroImageSrc.replace('.jpg', '@3x.avif')} 3x
           `}
         />
-
+        <source
+          type='image/jpeg'
+          srcSet={`${heroImageSrc} 1x,
+            ${heroImageSrc.replace('.jpg', '@2x.jpg')} 2x,
+            ${heroImageSrc.replace('.jpg', '@3x.jpg')} 3x
+          `}
+        />
         <HeroImage
-          alt='A cute looking cat with striking eyes emerging from a black background'
           src={heroImageSrc.replace('.jpg', '.avif')}
+          alt='A cute looking cat with striking eyes emerging from a black background'
         />
       </picture>
       <Swoop alt='' src='/swoop.svg' />

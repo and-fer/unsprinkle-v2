@@ -7,12 +7,19 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
       <Anchor href={`/photos/${id}`}>
         <picture>
           <source
+            type='image/avif'
             srcSet={`${src.replace('.jpg', '.avif')} 1x,
               ${src.replace('.jpg', '@2x.avif')} 2x,
               ${src.replace('.jpg', '@3x.avif')} 3x
             `}
           />
-
+          <source
+            type='image/jpeg'
+            srcSet={`${src} 1x,
+              ${src.replace('.jpg', '@2x.jpg')} 2x,
+              ${src.replace('.jpg', '@3x.jpg')} 3x
+            `}
+          />
           <Image
             alt={`View full size image: ${alt}`}
             src={src.replace('.jpg', '.avif')}
