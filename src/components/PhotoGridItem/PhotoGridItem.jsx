@@ -34,7 +34,8 @@ const Anchor = styled.a`
 const Image = styled.img`
   display: block;
   width: 100%;
-  height: 300px;
+  aspect-ratio: 4.8 / 4;
+  object-fit: cover;
   border-radius: 2px;
   margin-bottom: 8px;
 `
