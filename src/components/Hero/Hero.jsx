@@ -14,9 +14,12 @@ const Hero = () => {
           `}
         />
 
-        <HeroImage src={heroImageSrc.replace('.jpg', '.avif')} />
+        <HeroImage
+          alt='A cute looking cat with striking eyes emerging from a black background'
+          src={heroImageSrc.replace('.jpg', '.avif')}
+        />
       </picture>
-      <Swoop src='/swoop.svg' />
+      <Swoop alt='' src='/swoop.svg' />
     </Wrapper>
   )
 }
