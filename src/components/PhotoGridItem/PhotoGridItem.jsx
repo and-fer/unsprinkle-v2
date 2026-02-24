@@ -13,7 +13,10 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
             `}
           />
 
-          <Image alt={alt} src={src.replace('.jpg', '.avif')} />
+          <Image
+            alt={`View full size image: ${alt}`}
+            src={src.replace('.jpg', '.avif')}
+          />
         </picture>
       </Anchor>
       <Tags>
