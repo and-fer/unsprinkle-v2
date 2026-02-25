@@ -23,7 +23,7 @@ const Hero = () => {
         />
         <HeroImage
           src={heroImageSrc.replace('.jpg', '.avif')}
-          alt='A cute looking cat with striking eyes emerging from a black background'
+          alt='Free high-quality animal photos for everyone (cat on black background sample)'
         />
       </picture>
       <Swoop alt='' src='/swoop.svg' />
